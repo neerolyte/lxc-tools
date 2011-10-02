@@ -1,0 +1,4 @@
+
+rough centos bootstrap command start:
+rpm --root /var/lib/lxc/centos/rootfs -vhi http://ftp.iinet.net.au/pub/centos/5/os/x86_64/CentOS/filesystem-2.4.0-3.el5.centos.x86_64.rpm http://ftp.iinet.net.au/pub/centos/5/os/x86_64/CentOS/basesystem-8.0-5.1.1.el5.centos.noarch.rpm http://ftp.iinet.net.au/pub/centos/5/os/x86_64/CentOS/bash-3.2-32.el5.x86_64.rpm http://ftp.iinet.net.au/pub/centos/5/os/x86_64/CentOS/glibc-2.5-65.x86_64.rpm http://ftp.iinet.net.au/pub/centos/5/os/x86_64/CentOS/glibc-common-2.5-65.x86_64.rpm http://ftp.iinet.net.au/pub/centos/5/os/x86_64/CentOS/termcap-5.5-1.20060701.1.noarch.rpm http://ftp.iinet.net.au/pub/centos/5/os/x86_64/CentOS/libgcc-4.1.2-51.el5.x86_64.rpm http://ftp.iinet.net.au/pub/centos/5/os/x86_64/CentOS/tzdata-2011g-1.el5.x86_64.rpm http://ftp.iinet.net.au/pub/centos/5/os/x86_64/CentOS/mktemp-1.5-23.2.2.x86_64.rpm http://ftp.iinet.net.au/pub/centos/5/os/x86_64/CentOS/libtermcap-2.0.8-46.1.x86_64.rpm
+
