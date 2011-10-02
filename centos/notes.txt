@@ -18,3 +18,8 @@ wget -c \
 	--
 
 rpm --root /var/lib/lxc/centos/rootfs -vhi /tmp/centos_rpms/*.rpm
+
+simpler:															
+ - use centos.repo attached
+ - # yum --installroot=/centos install yum
+ - try using --enable/disablerepo too.
