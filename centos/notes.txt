@@ -23,3 +23,5 @@ simpler:
  - use centos.repo attached
  - # yum --installroot=/centos install yum
  - try using --enable/disablerepo too.
+
+even simpler (derp derp): febootstrap centos-5 /tmp/centos http://ftp.iinet.net.au/pub/centos/5/os/x86_64/
