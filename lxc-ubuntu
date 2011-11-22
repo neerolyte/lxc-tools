@@ -285,8 +285,8 @@ install_ubuntu()
         --include ifupdown,locales,netbase,net-tools,iproute,openssh-server,dhcp3-client,gpgv,adduser,apt-utils,vim,openssh-blacklist,openssh-blacklist-extra,console-setup,sudo,iputils-ping,aptitude,ubuntu-minimal \
         $release $rootfs $debmirror
 
-    resULT=$?
-    if [ "$resULT" != "0" ]; then
+    result=$?
+    if [ "$result" != "0" ]; then
         echo "Failed to download the rootfs, aborting."
         exit 1
     fi
