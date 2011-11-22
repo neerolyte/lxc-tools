@@ -282,7 +282,7 @@ install_ubuntu()
     # download a mini ubuntu into a cache
     echo "Downloading ubuntu minimal ..."
     debootstrap --verbose --variant=minbase --arch=$arch \
-        --include ifupdown,locales,netbase,net-tools,iproute,openssh-server,dhcp3-client,gpgv,adduser,apt-utils,vim,openssh-blacklist,openssh-blacklist-extra,console-setup,sudo,iputils-ping,aptitude,ubuntu-minimal \
+        --include ifupdown,locales,netbase,net-tools,iproute,openssh-server,gpgv,adduser,apt-utils,vim,openssh-blacklist,openssh-blacklist-extra,console-setup,sudo,iputils-ping,aptitude,ubuntu-minimal \
         $release $rootfs $debmirror
 
     result=$?
