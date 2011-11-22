@@ -283,7 +283,7 @@ install_ubuntu()
     echo "Downloading ubuntu minimal ..."
     debootstrap --verbose --variant=minbase --arch=$arch \
         --include ifupdown,locales,netbase,net-tools,iproute,openssh-server,dhcp3-client,gpgv,adduser,apt-utils,vim,openssh-blacklist,openssh-blacklist-extra,console-setup,sudo,iputils-ping,aptitude,ubuntu-minimal \
-        lucid $rootfs $debmirror
+        $release $rootfs $debmirror
 
     resULT=$?
     if [ "$resULT" != "0" ]; then
@@ -409,6 +409,7 @@ usage() {
     echo "  --arch <i386|amd64>: dpkg arch type"
     echo "  -y|--yes: assume defaults are correct for all questions, do not ask interactive questions"
     echo "  --device </dev/foo>: specify some device to mount as the rootfs of the lxc, 'auto' will use /dev/vg0/lxc-<name>"
+    echo "  --release <release name>: defaults to 'lucid', see http://archive.ubuntu.com/ubuntu/dists/"
     echo 
     echo "Have fun :)"
 }
@@ -448,6 +449,10 @@ while true; do
             device="$2"
             shift
             ;;
+        --release)
+            release="$2"
+            shift
+            ;;
         -y|--yes)
             interactive=no
             ;;
@@ -474,6 +479,7 @@ conffile="/var/lib/lxc/$utsname.conf"
 rootfs="/var/lib/lxc/$utsname/rootfs"
 arch="${arch:-$(dpkg --print-architecture)}"
 device="${device:-}"
+release="${release:-lucid}"
 [[ $device = auto ]] && device="/dev/vg0/lxc-$utsname"
 
 $command
